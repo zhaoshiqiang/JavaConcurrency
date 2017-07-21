@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * 缺点是getAndSet底层使用CAS来实现，一直在修改共享变量的值，会引发缓存一致性流量风暴
  * Created by zhaoshq on 2017/7/20.
  */
-public class TASLock implements Lock{
+public class TASTestLock implements TestLock {
 
     private AtomicBoolean mutex = new AtomicBoolean(false);
     @Override
@@ -27,6 +27,6 @@ public class TASLock implements Lock{
     }
 
     public String toString(){
-        return "TASLock";
+        return "TASTestLock";
     }
 }
