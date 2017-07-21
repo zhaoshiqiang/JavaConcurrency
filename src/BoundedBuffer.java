@@ -3,10 +3,10 @@
  * 内置锁的标准形式为：
  * <code>
  *     //必须通过一个锁来保护条件队列
- * synchronized(lock){
+ * synchronized(TestLock){
  *      //这里必须要用while，这是为了防止过早唤醒
  *     while( !conditionPredicate() ){
- *         lock.wait();
+ *         TestLock.wait();
  *     }
  *     //现在对象处于合适状态
  *
